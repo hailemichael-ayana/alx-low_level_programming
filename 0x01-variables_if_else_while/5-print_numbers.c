@@ -9,8 +9,13 @@
 
 int main(void)
 {
-	for (int numbers = 0 ; numbers < 9 ; numbers++)
+	int numbers = 0;
+
+	while (numbers <= 9)
+	{
 		printf("%i", numbers);
+		numbers++;
+	}
 	printf("\n");
 	return (0);
 }
