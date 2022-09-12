@@ -35,7 +35,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
-				hundredth;
+				hundredth++;
 			}
 			tenth++;
 		}
