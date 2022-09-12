@@ -13,9 +13,12 @@ int main(void)
 
 	while (numbers <= 9)
 	{
-		putchar(numbers);
+		putchar(numbers + 48);
 		if (numbers != 9)
+		{
 			putchar(',');
+			putchar(' ');
+		}
 		numbers++;
 	}
 	return (0);
