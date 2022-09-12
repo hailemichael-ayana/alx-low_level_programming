@@ -10,6 +10,7 @@ int main(void)
 {
 	char small = 'a';
 	char capital = 'A';
+
 	while (small <= 'z')
 	{
 		putchar(small);
