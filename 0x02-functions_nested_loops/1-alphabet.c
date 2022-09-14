@@ -1,12 +1,10 @@
 #include"main.h"
 /**
- * main - Entry point
- *
- * Description: prints the alphabet
+ * print_alphabet - prints the alphabet
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int print_alphabet(void)
 {
 	int letter;
 
