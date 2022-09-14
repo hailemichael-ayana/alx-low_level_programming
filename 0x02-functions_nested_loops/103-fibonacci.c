@@ -2,7 +2,7 @@
 /**
 * main - Entry point
 *
-* Description: Prints the sum of even-valued 
+* Description: Prints the sum of even-valued
 * fibonacci sequence up to four million
 *
 * Return: Always 0 (Success)
@@ -11,6 +11,7 @@ int main(void)
 {
 	unsigned long fib1 = 0, fib2 = 1, sum;
 	float total_sum;
+
 	while (1)
 	{
 		sum = fib1 + fib2;
