@@ -10,6 +10,7 @@ int main(void)
 {
 	char str[] = "_putchar";
 	int letter;
+
 	for (letter = 0; letter < 8; letter++)
 		_putchar(str[letter]);
 	_putchar('\n');
