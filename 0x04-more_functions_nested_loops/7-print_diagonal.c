@@ -3,6 +3,8 @@
  * print_diagonal - print a diagonal line
  *
  * @num: is the number \ character
+ *
+ * Return: Always 0
  */
 void print_diagonal(int num)
 {
