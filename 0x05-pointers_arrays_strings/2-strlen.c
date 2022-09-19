@@ -15,7 +15,7 @@ int _strlen(char *s)
 	while (letters != '\0')
 	{
 		sum++;
-		letters = s[i++];
+		letters = s[x++];
 	}
 	return (sum);
 }
