@@ -10,8 +10,8 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
-		num = -num;
+		_putchar(45);
+		num = num * -1;
 	}
 	if ((num / 10) > 0)
 		print_number(num / 10);
