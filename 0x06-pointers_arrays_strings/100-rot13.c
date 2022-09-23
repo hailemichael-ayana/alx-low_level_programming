@@ -15,7 +15,7 @@ char *rot13(char *arr)
 
 	while (arr[i] != '\0')
 	{
-		for (j = 0; orderd[j] != '\0' && arr[i] != orderd[j]; j++)
+		for (j = 0; ordered[j] != '\0' && arr[i] != ordered[j]; j++)
 			;
 		if (j < 52)
 		{
