@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_number - Prints an integer.
  *
@@ -6,6 +7,7 @@
  *
  * Return: Always 0
  */
+
 void print_number(int n)
 {
 	unsigned int z, y, x;
@@ -17,13 +19,15 @@ void print_number(int n)
 	}
 	else
 		z = n;
+
 	y = z;
 	x = 1;
+
 	while (y > 9)
 	{
 		y /= 10;
 		x *= 10;
 	}
 	for (; x >= 1; x /= 10)
-		_putchar(((a / x) % 10) + 48);
+		_putchar(((z / x) % 10) + 48);
 }
