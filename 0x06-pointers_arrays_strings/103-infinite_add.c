@@ -13,54 +13,46 @@
  *
  * Return: char
  */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0;
-	int j = 0;
-	int count = 0;
-	int digit = 0;
-	unsigned int digitval;
-	unsigned int value1 = 0;
-	unsigned int value2 = 0;
-	unsigned int value3 = 0;
-	char *p = r;
+	int a = 0, b = 0, add = 0, o, g, c, d;
 
-	while (n1[i + 1])
-	{
-		n1++;
-		i++;
-	}
-	while (i)
-	{
-		value1 += n1[i] - '0';
-		i--;
-	}
-	while (n2[j + 1])
-	{
-		n2++;
-		j++;
-	}
-	while (j)
-	{
-		value2 += n2[j - '0'];
-		j--;
-	}
-	value3 = value1 + value2;
-	digitval = value3;
-	while (digitval / 10)
-	{
-		count += 1;
-		digitval /= 10;
-	}
-	count += 1;
-	if (count > size_r)
+	while (*(n1 + a) != '\0')
+		a++;
+	while (*(n2 + b) != '\0')
+		b++;
+	if (a >= b)
+		g = a;
+	else
+		g = b;
+	if (size_r <= g + 1)
 		return (0);
-	for (; count; count--)
+	r[g + 1] = '\0';
+	a--, b--, size_r--;
+	c = *(n1 + a) - 48, d = *(n2 + b) - 48;
+	while (g >= 0)
 	{
-		digit = (value3 % 10);
-		value3 = (value3 - digit);
-		r[count] = digit + '0';
+		o = c + d + add;
+		if (o >= 10)
+			add = o / 10;
+		else
+			add = 0;
+		if (o > 0)
+			*(r + g) = (o % 10) + 48;
+		else
+			*(r + g) = '0';
+		if (a > 0)
+			a--, c = *(n1 + a) - 48;
+		else
+			c = 0;
+		if (b > 0)
+			b--, d = *(n2 + b) - 48;
+		else
+			d = 0;
+		g--, size_r--;
 	}
-	return (p);
+	if (*(r) == '0')
+		return (r + 1);
+	else
+		return (r);
 }
