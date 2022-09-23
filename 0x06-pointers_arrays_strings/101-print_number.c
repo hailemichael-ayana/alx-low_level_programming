@@ -10,24 +10,21 @@
 
 void print_number(int n)
 {
-	unsigned int z, y, x;
-
+	unsigned int a, b, x;
 	if (n < 0)
 	{
 		_putchar(45);
-		z = n * -1;
+		a = n * -1;
 	}
 	else
-		z = n;
-
-	y = z;
+		a = n;
+	b = a;
 	x = 1;
-
-	while (y > 9)
+	while (b > 9)
 	{
-		y /= 10;
+		b /= 10;
 		x *= 10;
 	}
 	for (; x >= 1; x /= 10)
-		_putchar(((z / x) % 10) + 48);
+		_putchar(((a / x) % 10) + 48);
 }
