@@ -3,29 +3,29 @@
 /**
  * print_number - prints an integer
  *
- * @n: input integer
+ * @n: input
  *
- * Return: no return
+ * Return: 0
  */
 
 void print_number(int n)
 {
-	unsigned int a, b, x;
+	unsigned int z, y, x;
 
 	if (n < 0)
 	{
 		_putchar(45);
-		a = n * -1;
+		z = n * -1;
 	}
 	else
-		a = n;
-	b = a;
+		z = n;
+	y = z;
 	x = 1;
-	while (b > 9)
+	while (y > 9)
 	{
-		b /= 10;
+		y /= 10;
 		x *= 10;
 	}
 	for (; x >= 1; x /= 10)
-		_putchar(((a / x) % 10) + 48);
+		_putchar(((y / x) % 10) + 48);
 }
