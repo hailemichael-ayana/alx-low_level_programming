@@ -1,19 +1,31 @@
 #include "main.h"
+
+
+
 /**
- * print_number - prints an integer
  *
- * @n: input integer
+ *  * print_number - prints an integer
  *
- * Return: no return
- */
+ *   *
+ *
+ *    * @n: input integer
+ *
+ *     *
+ *
+ *      * Return: no return
+ *
+ *       */
 
 void print_number(int n)
+
 {
+
 	unsigned int a, b, x;
 
 	if (n < 0)
 	{
 		_putchar(45);
+
 		a = n * -1;
 	}
 	else
@@ -27,4 +39,5 @@ void print_number(int n)
 	}
 	for (; x >= 1; x /= 10)
 		_putchar(((a / x) % 10) + 48);
+
 }
