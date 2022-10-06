@@ -1,5 +1,5 @@
 #include"main.h"
-#include <stdlib.h>
+
 /**
  * malloc_checked - returns a pointer to the allocated memory
  *
