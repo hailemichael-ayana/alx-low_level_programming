@@ -11,8 +11,7 @@ void print_all(const char *const format, ...)
 {
 	va_list valist;
 	unsigned int i = 0, j = 0, c = 0;
-	char *str;
-	const char t_arg[] = "cifs";
+	char *str, t_arg[] = "cifs";
 
 	va_start(valist, format);
 	while (format && format[i])
@@ -45,6 +44,7 @@ void print_all(const char *const format, ...)
 					break;
 				}
 				printf("%s", str);
+				break;
 		}
 		i++;
 	}
