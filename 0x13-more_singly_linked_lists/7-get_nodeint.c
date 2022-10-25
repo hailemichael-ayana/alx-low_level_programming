@@ -1,5 +1,4 @@
 #include "lists.h"
-i
 /**
  * get_nodeint_at_index - return nth node of the list
  *
