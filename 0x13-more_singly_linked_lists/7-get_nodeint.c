@@ -1,5 +1,5 @@
 #include "lists.h"
-
+i
 /**
  * get_nodeint_at_index - return nth node of the list
  *
@@ -11,18 +11,12 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *tmp;
-	unsigned int i = 0
-
-	tmp = head;
-	if (tmp == NULL)
-		return (NULL);
-	while (tmp != NULL)
+	unsigned int i = 0;
+	listint_t *temp = head;
+	while (temp && i < index)
 	{
-		if (i == index)
-			return (tmp);
+		temp = temp->next;
 		i++;
-		tmp = tmp->next;
 	}
-	return (tmp);
+return (temp ? temp : NULL);
 }

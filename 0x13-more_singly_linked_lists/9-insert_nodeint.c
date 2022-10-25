@@ -8,36 +8,36 @@
  *
  * @n: integer
  *
- * Return: address a node to insert
+ * Return: pointer
  */
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *tmp, *new_node;
 	unsigned int i;
+	listint_t *new;
+	listint_t *temp = *head;
 
-	if (head == NULL)
+	new = malloc(sizeof(listint_t));
+	if (!new || !head)
 		return (NULL);
-	tmp = *head;
-	i = 1;
-	while (i < idx && tmp)
-	{
-		tmp = tmp->next;
-		if (tmp == NULL)
-			return (NULL);
-		i++;
-	}
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->n = n;
-	new_node->next = NULL;
+	new->n = n;
+	new->next = NULL;
 	if (idx == 0)
 	{
-		new_node->next = *head;
-		*head = new_node;
-		return (new_node);
+		new->next = *head;
+		*head = new;
+		return (new);
 	}
-	new_node->next = tmp->next;
-	tmp->next = new_node;
-	return (new_node);
+	for (i = 0; temp && i < idx; i++)
+	{
+		if (i == idx - 1)
+		{
+			new->next = temp->next;
+			temp->next = new;
+			return (new);
+		}
+		else
+			temp = temp->next;
+	}
+	return (NULL);
 }
