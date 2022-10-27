@@ -5,7 +5,7 @@
  *
  *@n: integer
  *
- *@index: position of index 
+ *@index: position of index
  *
  *Return: value of a bit
  */
